@@ -1,0 +1,40 @@
+<ion-view mz-screen cache-view="false" class="loginBackground">
+    <ion-content class="loginView" scroll="false">
+        <div class="row row-center appLogo">
+            <div class="col text-center">
+                <img ng-src="resources/login.png" width="300px">
+            </div>
+        </div>
+    </ion-content>
+    <div class="row row-center enterButtonDiv">
+        <div class="col text-center buttonContainer">
+            <button nav-clear class="button button-block buttonEnter" type="button" ng-click="enterApp()">
+                {{'entry' | translate}}
+            </button>
+        </div>
+    </div>
+    <!--<div class="row row-center socialButtonsDiv" ng-show="contactInfo.social.twitter & contactInfo.social.facebook & contactInfo.social.linkedin & contactInfo.social.youtube">-->
+    <div class="row row-center socialButtonsDiv" >
+        <div class="col"></div>
+        <div class="col text-center" ng-show="loginInfo.social.twitter">
+            <img src="resources/twitterIcon.png"  ng-click="openURL(loginInfo.social.twitter.url)">
+        </div>
+        <div class="col text-center" ng-show="loginInfo.social.facebook">
+            <img src="resources/facebookIcon.png"  ng-click="openURL(loginInfo.social.facebook.url)">
+        </div>
+        <!-- <div class="col text-center" ng-show="loginInfo.social.instagram">
+            <img src="img/instragramIcon.png"  ng-click="openURL(login.social.instagram.url)">
+        </div> -->
+        <div class="col text-center" ng-show="loginInfo.social.linkedin">
+            <img src="resources/linkedinIcon.png" ng-click="openURL(login.social.linkedin.url)">
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <div class="row row-center creatorLogo">
+        <div class="col text-center">
+            <img ng-src="resources/bySynergy.png" width="150px">
+        </div>
+    </div>
+
+</ion-view>
